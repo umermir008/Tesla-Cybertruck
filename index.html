@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Cybertruck - The Future of Driving</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-lg border-b border-blue-500/20">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-400 font-orbitron">TESLA</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="#specs" class="hover:text-blue-400 transition-colors">Specs</a>
+                <a href="#tech" class="hover:text-blue-400 transition-colors">Technology</a>
+                <a href="#gallery" class="hover:text-blue-400 transition-colors">Gallery</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+            </div>
+            <button class="md:hidden text-blue-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80 z-10"></div>
+        <div class="hero-bg absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1617788138017-80ad40651399?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80')"></div>
+        
+        <div class="hero-content relative z-20 text-center max-w-4xl px-6">
+            <h1 class="hero-title text-5xl md:text-7xl font-bold mb-6 font-orbitron">
+                The Future of <span class="text-blue-400 neon-glow">Driving</span>
+            </h1>
+            <h2 class="hero-subtitle text-3xl md:text-4xl mb-4 font-orbitron">Tesla Cybertruck</h2>
+            <p class="hero-text text-xl md:text-2xl mb-8 text-gray-300">Power, Innovation, and Sustainability</p>
+            <button class="cta-button bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg text-xl font-semibold transition-all duration-300 transform hover:scale-105 neon-button">
+                Reserve Now
+            </button>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
+                         alt="Tesla Technology" 
+                         class="rounded-lg shadow-2xl hover:transform hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="about-content">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 font-orbitron text-blue-400">About Cybertruck</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 about-point">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full mt-3 neon-dot"></div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">100% Electric</h3>
+                                <p class="text-gray-300">Zero emissions, maximum performance with cutting-edge battery technology.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 about-point">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full mt-3 neon-dot"></div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Ultra-Durable</h3>
+                                <p class="text-gray-300">Exoskeleton design built from ultra-hard 30X cold-rolled stainless steel.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 about-point">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full mt-3 neon-dot"></div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Futuristic Design</h3>
+                                <p class="text-gray-300">Revolutionary design that redefines what a pickup truck can be.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance & Specs Section -->
+    <section id="specs" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+        <div class="absolute inset-0 bg-black/70"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 font-orbitron text-blue-400">Performance & Specs</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="spec-card bg-black/50 backdrop-blur-lg p-8 rounded-lg border border-blue-500/30 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    <div class="text-4xl mb-4 text-blue-400">⚡</div>
+                    <h3 class="text-2xl font-bold mb-2">845 HP</h3>
+                    <p class="text-gray-300">Peak Horsepower</p>
+                </div>
+                
+                <div class="spec-card bg-black/50 backdrop-blur-lg p-8 rounded-lg border border-blue-500/30 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    <div class="text-4xl mb-4 text-blue-400">🔋</div>
+                    <h3 class="text-2xl font-bold mb-2">500+ Miles</h3>
+                    <p class="text-gray-300">Range</p>
+                </div>
+                
+                <div class="spec-card bg-black/50 backdrop-blur-lg p-8 rounded-lg border border-blue-500/30 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    <div class="text-4xl mb-4 text-blue-400">🚀</div>
+                    <h3 class="text-2xl font-bold mb-2">2.6s</h3>
+                    <p class="text-gray-300">0-60 mph</p>
+                </div>
+                
+                <div class="spec-card bg-black/50 backdrop-blur-lg p-8 rounded-lg border border-blue-500/30 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    <div class="text-4xl mb-4 text-blue-400">🛡️</div>
+                    <h3 class="text-2xl font-bold mb-2">11,000 lbs</h3>
+                    <p class="text-gray-300">Towing Capacity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="tech" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 font-orbitron text-blue-400">Advanced Technology</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div class="tech-content order-2 md:order-1">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+                        <div class="tech-feature text-center p-6 rounded-lg transition-all duration-300">
+                            <div class="text-4xl mb-4 text-blue-400">🤖</div>
+                            <h3 class="text-xl font-semibold mb-2">Full Self-Driving</h3>
+                            <p class="text-gray-300 text-sm">Advanced autopilot capabilities</p>
+                        </div>
+                        
+                        <div class="tech-feature text-center p-6 rounded-lg transition-all duration-300">
+                            <div class="text-4xl mb-4 text-blue-400">🗺️</div>
+                            <h3 class="text-xl font-semibold mb-2">Smart Navigation</h3>
+                            <p class="text-gray-300 text-sm">AI-powered route optimization</p>
+                        </div>
+                        
+                        <div class="tech-feature text-center p-6 rounded-lg transition-all duration-300">
+                            <div class="text-4xl mb-4 text-blue-400">☀️</div>
+                            <h3 class="text-xl font-semibold mb-2">Solar Charging</h3>
+                            <p class="text-gray-300 text-sm">Renewable energy integration</p>
+                        </div>
+                        
+                        <div class="tech-feature text-center p-6 rounded-lg transition-all duration-300">
+                            <div class="text-4xl mb-4 text-blue-400">📱</div>
+                            <h3 class="text-xl font-semibold mb-2">AR Dashboard</h3>
+                            <p class="text-gray-300 text-sm">Augmented reality interface</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-image order-1 md:order-2">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2125&q=80" 
+                         alt="Futuristic Technology" 
+                         class="rounded-lg shadow-2xl w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section id="video" class="py-20 bg-black">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-16 font-orbitron text-blue-400">Cybertruck in Action</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="relative rounded-lg overflow-hidden shadow-2xl video-container">
+                    <div class="aspect-video bg-gray-900 flex items-center justify-center relative video-wrapper">
+                        <!-- Video Background Image -->
+                        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat video-thumbnail" 
+                             style="background-image: url('https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                        
+                        <!-- Overlay -->
+                        <div class="absolute inset-0 bg-black/50 video-overlay"></div>
+                        
+                        <!-- Play Button -->
+                        <button class="play-button w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-all duration-300 pulse-animation relative z-10 group">
+                            <svg class="w-10 h-10 ml-1 text-white group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M8 5v10l8-5-8-5z"/>
+                            </svg>
+                        </button>
+                        
+                        <!-- YouTube Video (Hidden Initially) -->
+                        <iframe class="absolute inset-0 w-full h-full hidden video-iframe" 
+                                data-src="https://www.youtube.com/embed/m7atGkba-Z8?autoplay=1&rel=0&modestbranding=1" 
+                                frameborder="0" 
+                                allow="autoplay; encrypted-media"
+                                allowfullscreen></iframe>
+                    </div>
+                    
+                    <!-- Video Info -->
+                    <div class="absolute bottom-4 left-4 text-left text-white video-info">
+                        <h3 class="text-lg font-semibold mb-1">Tesla Cybertruck</h3>
+                        <p class="text-sm text-gray-300">Official Demo Video</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 font-orbitron text-blue-400">Gallery</h2>
+            
+            <div class="gallery-scroll overflow-x-auto pb-6">
+                <div class="flex space-x-6 w-max">
+                    <div class="gallery-item w-80 h-60 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
+                             alt="Cybertruck Side View" 
+                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    
+                    <div class="gallery-item w-80 h-60 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1593941707882-a5bac6861d75?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" 
+                             alt="Tesla Charging" 
+                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    
+                    <div class="gallery-item w-80 h-60 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Futuristic Car Interior" 
+                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    
+                    <div class="gallery-item w-80 h-60 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Tesla Performance" 
+                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Test Drive Section -->
+    <section id="contact" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+        <div class="absolute inset-0 bg-black/70"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 font-orbitron text-blue-400">Book a Test Drive</h2>
+            
+            <div class="max-w-2xl mx-auto">
+                <form class="space-y-6 booking-form">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <input type="text" 
+                                   placeholder="Full Name" 
+                                   class="w-full px-4 py-3 bg-black/50 border border-blue-500/30 rounded-lg focus:border-blue-400 focus:outline-none transition-colors duration-300 text-white placeholder-gray-400">
+                        </div>
+                        <div>
+                            <input type="email" 
+                                   placeholder="Email Address" 
+                                   class="w-full px-4 py-3 bg-black/50 border border-blue-500/30 rounded-lg focus:border-blue-400 focus:outline-none transition-colors duration-300 text-white placeholder-gray-400">
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <input type="tel" 
+                                   placeholder="Phone Number" 
+                                   class="w-full px-4 py-3 bg-black/50 border border-blue-500/30 rounded-lg focus:border-blue-400 focus:outline-none transition-colors duration-300 text-white placeholder-gray-400">
+                        </div>
+                        <div>
+                            <input type="date" 
+                                   class="w-full px-4 py-3 bg-black/50 border border-blue-500/30 rounded-lg focus:border-blue-400 focus:outline-none transition-colors duration-300 text-white">
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" 
+                                class="submit-button bg-blue-600 hover:bg-blue-700 px-12 py-4 rounded-lg text-xl font-semibold transition-all duration-300 transform hover:scale-105 neon-button">
+                            Book Now
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-blue-500/20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-8">
+                <div class="text-3xl font-bold text-blue-400 font-orbitron mb-4">TESLA</div>
+                <div class="flex justify-center space-x-8 mb-6">
+                    <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-blue-400 transition-colors">Models</a>
+                    <a href="#contact" class="hover:text-blue-400 transition-colors">Reserve</a>
+                    <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+                </div>
+            </div>
+            
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="social-icon w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-300">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-300">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-300">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="text-center text-gray-400">
+                <p>&copy; 2025 Tesla Cybertruck. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
